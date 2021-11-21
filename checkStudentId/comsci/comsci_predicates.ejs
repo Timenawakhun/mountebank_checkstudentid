@@ -1,0 +1,17 @@
+{
+    "and":[
+       {
+            "equals":{
+                "path":"/students/v1/check/studentid",
+                "method":"POST"
+            }
+       },
+       {
+          "matches":{
+             "body":{
+                "studentId":"^59090500[4]{1}[0-9]{2}(?![0-9])"
+             }
+          }
+       }
+    ]
+ }

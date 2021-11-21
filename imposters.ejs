@@ -1,0 +1,46 @@
+{
+        "imposters": [
+                {
+                        "port": "6969",
+                        "protocol": "http",
+                        "name": "checkStudentId",
+                        "stubs": [
+                                {
+                                        "predicates": [ <% include checkStudentId/comsci/comsci_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/comsci/comsci_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/stat/stat_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/stat/stat_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/math/math_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/math/math_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/not_found/not_found_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/not_found/not_found_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/except_text/except_text_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/except_text/except_text_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/incomplete/incomplete_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/incomplete/incomplete_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/overnumber/overnumber_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/overnumber/overnumber_response.ejs %> ]
+                                },
+                                {
+                                        "predicates": [ <% include checkStudentId/empty/empty_predicates.ejs %> ],
+                                        "responses": [ <% include checkStudentId/empty/empty_response.ejs %> ]
+                                },
+                                {
+                                        "responses": [ <% include proxy.ejs %> ]
+                                }
+                        ]
+                }
+        ]
+}
